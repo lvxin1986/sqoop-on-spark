@@ -11,6 +11,8 @@ as relational databases and enterprise data warehouses.
 
 Sqoop ships with documentation, please check module "docs" for additional materials.
 
+
+
 More documentation is available online on Sqoop home page:
 
 http://sqoop.apache.org/
@@ -36,7 +38,8 @@ against a specific Hadoop version, please specify the hadoop.profile property in
 Maven commands. For example:
 
   mvn package -Pbinary -Dhadoop.profile=100
-
+  or
+  mvn package -DskipTests=true -Dmaven.javadoc.skip=true -Pbinary -Dhadoop.profile=200  
 Please refer to the Sqoop documentation for a full list of supported Hadoop
 distributions and values of the hadoop.profile property.
 
