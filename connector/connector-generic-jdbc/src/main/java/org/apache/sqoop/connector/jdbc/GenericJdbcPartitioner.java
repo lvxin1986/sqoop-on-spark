@@ -250,6 +250,7 @@ public class GenericJdbcPartitioner extends Partitioner<LinkConfiguration, FromJ
 
     // Having one single value means that we can create only one single split
     if(minStringBD.equals(maxStringBD)) {
+
       GenericJdbcPartition partition = new GenericJdbcPartition();
       partition.setCondition(constructTextConditions(prefix, BigDecimal.ZERO, BigDecimal.ZERO,
         partitionMinValue, partitionMaxValue, true, true));
